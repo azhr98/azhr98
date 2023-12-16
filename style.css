@@ -1,0 +1,327 @@
+
+html {
+  background-color: #556b2f;
+  Max-width: 100%;
+}
+
+
+body {
+  color: black;
+  background-color: #fff;
+  padding: 30px 30px 30px;
+  max-width: 900px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 3px;
+  position: relative;
+  font-family: serif;
+  margin: 20px auto;
+}
+
+
+
+  
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .pagetop {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: #fff;
+    border: solid 2px #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .pagetop__arrow {
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    transform: translateY(20%) rotate(-45deg);
+  }
+  
+  
+  a {color:#2f4f4f;text-decoration:underline;
+  }
+
+
+  /* カーソルを合わせたときに表示を変える */
+p.hover-sample:hover{
+	color: blue;
+}
+  
+  .ruled-line {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 2.3;
+    background-image: linear-gradient(180deg, #ddd 1px, transparent 1px);
+    background-size: 100% 2.3em;
+    background-position: bottom 1px center;
+  }
+
+
+  h1 {
+    font-weight: normal;
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
+    margin: 0 0 30px 0;
+    letter-spacing: 5px;
+}
+ 
+h2 {
+  position: relative;
+  padding: 0.5em;/*文字周りの余白*/
+  color: #494949;/*文字色*/
+  background: #f4f4f4;/*背景色*/
+  border-left: solid 5px #7db4e6;/*左線（実線 太さ 色）*/
+}
+
+
+
+
+
+main {
+  position: relative;
+  
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+mark {background: linear-gradient(transparent 40%, #b0c4de 80%);}
+
+
+
+
+
+.container {
+  padding: 1%;
+}
+
+.header,
+.footer {
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background: #eee;
+  padding: 15px 20px 15px 20px;
+}
+
+.content {
+  display: flex;
+  padding: 20px 0;
+}
+
+.main {
+  flex: 1 0 auto;
+  align-items: center;
+  justify-content: center;
+  height: 2000px;
+  max-width: 840px;
+  margin-right: 10px;
+  padding: 15px 20px 15px 20px;
+}
+
+.side {
+  display: flex;
+  position: fixed; 
+  z-index: 99999; 
+  top: 140px; /* 上から150pxのところにバナーを配置します */
+  right: 90px; /* 右から40pxのところにバナーを配置します */
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 140px;
+  color: #black;
+  background: #fff;
+}
+
+#topBanner {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: #f5ccc4;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+	color: inherit;
+}
+input {
+  display: none;
+}
+.cp_fullscreenmenu {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+}
+/*menuコンテンツ*/
+.cp_fullscreenmenu .menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-image: linear-gradient(to top, rgba(255,8,68,0.8) 0%, rgba(255,177,153,0.7) 100%);
+}
+.cp_fullscreenmenu .menu label {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background-size: 100%;
+}
+.cp_fullscreenmenu .menu .menucont {
+	font-size: 54px;
+	position: relative;
+	top: 50%;
+	margin-top: -170px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+.cp_fullscreenmenu .menu ul {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+.cp_fullscreenmenu .menu ul li,
+.cp_fullscreenmenu .menu ul li a {
+	transition: all 0.3s ease;
+}
+.cp_fullscreenmenu .menu ul li a {
+	display: block;
+	padding: 10px 0;
+	color: #ffffff;
+}
+.cp_fullscreenmenu .menu ul li a:hover {
+	color: #2f4f4f;
+}
+.cp_fullscreenmenu .menu ul li:hover {
+	background: #ffffff;
+}
+/*クリックしたらメニューが開閉の動作*/
+.cp_fullscreenmenu .menuEffects {
+	visibility: hidden;
+	transition: opacity 0.5s, visibility 0.5s;
+	opacity: 0;
+}
+.cp_fullscreenmenu .menuEffects ul {
+	transition: all 0.5s;
+	transform: translateY(0%);
+}
+.cp_fullscreenmenu #menuToggle:checked ~ .menuEffects {
+	visibility: visible;
+	transition: opacity 0.5s;
+	opacity: 1;
+}
+.cp_fullscreenmenu #menuToggle:checked ~ .menuEffects ul {
+	opacity: 1;
+}
+.cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open {
+	background-color: transparent;
+}
+.cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open:before {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	content: '';
+	transform: rotate(45deg);
+	background-color: #ffffff;
+}
+.cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open:after {
+	position: relative;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	content: '';
+	transform: rotate(-45deg);
+	background-color: #ffffff;
+}
+.cp_fullscreenmenu #menuToggle:not(:checked) ~ .menuEffects ul {
+	transform: translateY(-30%);
+}
+/*ハンバーガー*/
+.cp_fullscreenmenu .hamburger {
+	position: relative;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 50px;
+	height: 50px;
+	padding: 15px;
+	cursor: pointer;
+}
+.cp_fullscreenmenu .hamburger:hover .open:before {
+	top: -9px;
+}
+.cp_fullscreenmenu .hamburger:hover .open:after {
+	top: 5px;
+}
+.cp_fullscreenmenu .open,
+.cp_fullscreenmenu .open:before,
+.cp_fullscreenmenu .open:after {
+	position: relative;
+	display: block;
+	width: 24px;
+	height: 4px;
+	border-radius: 2px;
+	background-color: black;
+	transition: all 0.3s ease;
+}
+.cp_fullscreenmenu .open {
+	top: 8px;
+	cursor: pointer;
+}
+.cp_fullscreenmenu .open:before {
+	top: -8px;
+	content: '';
+	transform: rotate(0deg);
+}
+.cp_fullscreenmenu .open:after {
+	top: 4px;
+	content: '';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
